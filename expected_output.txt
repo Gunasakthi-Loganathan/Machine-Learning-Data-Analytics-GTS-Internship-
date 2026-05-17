@@ -1,0 +1,67 @@
+
+--- DATA PREVIEW ---
+   Order_ID        Date Region     Category      Segment    Sales  Profit
+0      1001  2025-01-03  South  Electronics     Consumer  15200.0  3100.0
+1      1002  2025-01-05   West      Fashion    Corporate   8200.0  1250.0
+2      1003  2025-01-12  North      Grocery     Consumer   5400.0   760.0
+3      1004  2025-02-02   East  Electronics  Home Office   9800.0  2100.0
+4      1005  2025-02-11  South    Furniture    Corporate  11200.0  1650.0
+Rows and columns: (23, 7)
+
+--- MISSING VALUES BEFORE CLEANING ---
+Order_ID    0
+Date        0
+Region      0
+Category    0
+Segment     0
+Sales       1
+Profit      1
+dtype: int64
+
+Duplicate rows removed: 1
+Cleaned rows: 22
+
+--- MONTHLY SALES ---
+Month
+January      28800.000000
+February     43400.000000
+March        48000.000000
+April        69900.000000
+May          90757.142857
+June        136200.000000
+Name: Sales, dtype: float64
+
+--- CATEGORY SUMMARY ---
+                     Sales   Profit
+Category                           
+Electronics  240457.142857  49500.0
+Fashion       88200.000000  11950.0
+Furniture     64200.000000   9750.0
+Grocery       24200.000000   3240.0
+
+--- REGION SUMMARY ---
+                Sales   Profit  Orders
+Region                                
+South   163500.000000  31750.0       7
+West    119357.142857  20150.0       6
+North    82000.000000  15860.0       4
+East     52200.000000   6680.0       5
+
+--- CUSTOMER SEGMENT SALES ---
+Segment
+Consumer       215857.142857
+Corporate      155400.000000
+Home Office     45800.000000
+Name: Sales, dtype: float64
+
+--- DASHBOARD METRICS ---
+Total Sales: 417057.14
+Total Profit: 74440.0
+Average Order Value: 18957.14
+Top Region: South
+Top Category: Electronics
+
+--- BASIC FORECAST ---
+Predicted next month sales: 139606.67
+
+Charts saved as PNG files in the current folder.
